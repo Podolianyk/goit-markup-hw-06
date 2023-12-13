@@ -11,6 +11,7 @@ body {
   color: #434455;
   background-color: #ffffff;
 }
+
 h1,
 h2,
 h3,
@@ -21,165 +22,24 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
+
 ol,
 ul {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
 }
+
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-.container {
-  max-width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-/*====================================Header==================================*/
-.top-menu {
-  border-bottom: 1px solid #e7e9fc;
-  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
-}
-.top-container {
-  display: flex;
-  justify-content: space-between;
-}
-.menu {
-  display: flex;
-  align-items: center;
-}
-.logo {
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #4d5ae5;
-  margin-right: 76px;
-}
-.accent {
-  color: #2e2f42;
-}
-.menu-list {
-  display: flex;
-  gap: 40px;
-}
 
-.contacts-list {
-  display: flex;
-  gap: 40px;
-}
-.menu-link {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  color: #2e2f42;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.menu-link:hover,
-.menu-link:focus {
-  color: #404bbf;
-}
-.current {
-  position: relative;
-  color: #404bbf;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.menu-link.current::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #404bbf;
-  bottom: -1px;
-  left: 0;
-}
-.contacts {
-  font-style: normal;
-}
-.contacts-mail {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-.contacts-mail {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.contacts-mail:hover,
-.contacts-mail:focus {
-  color: #404bbf;
-}
-/*================================Section 1===================================*/
-.main-solutions {
-  padding: 188px 0;
-  margin: 0 auto;
-  background-color: #2e2f42;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/hero/people-office.jpg);
-  background-repeat: no-repeat;
-  max-width: 1440px;
-  background-position: center;
-  background-size: cover;
-}
-.main-title {
-  font-size: 56px;
-  line-height: 1.07;
-  text-align: center;
-  letter-spacing: 0.02em;
-  max-width: 496px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 48px;
-  color: #ffffff;
-}
-.main-order {
-  display: block;
+button {
   cursor: pointer;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 16px 32px;
-  border-radius: 4px;
-  min-width: 169px;
-  height: 56px;
-  border: none;
-  background-color: #4d5ae5;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.main-order:hover,
-.main-order:focus {
-  background-color: #404bbf;
 }
 
-/*=================================Section 2==================================*/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -192,90 +52,614 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.benefits-container-icon-items {
+
+.container {
+  max-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ============== TABLET GENERAL STYLES ==================== */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+/* ============== /TABLET GENERAL STYLES ==================== */
+/* ============== DESKTOP GENERAL STYLES ==================== */
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+/* ============== /DESKTOP GENERAL STYLES ==================== */
+/* ============== MOBILE HEADER STYLES ======================= */
+.menu-list {
+  display: none;
+}
+
+.contacts {
+  display: none;
+}
+
+.top-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  position: relative;
-  height: 112px;
-  background-color: #f4f4fd;
-  border-radius: 4px;
-  margin-bottom: 8px;
-  border: 1px solid #8e8f99;
 }
-.benefits-title {
+
+.logo {
+  color: #4d5ae5;
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.accent {
   color: #2e2f42;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  margin-bottom: 8px;
 }
-.benefits-description {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
+
+.top-menu {
+  border-bottom: 1px solid #e7e9fc;
+  background: #fff;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
-.benefits-list {
-  display: flex;
-  gap: 24px;
+
+@media screen and (max-width: 767px) {
+  .top-menu {
+    padding-top: 17.5px;
+    padding-bottom: 17.5px;
+  }
+
+  .mobile-menu-burger {
+    background-color: transparent;
+    padding: 0;
+    line-height: 0;
+    fill: #2f2f37;
+    border: none;
+  }
+
+  .mobile-menu-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999999;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-menu-wrapper.is-open {
+    transform: translateX(0%);
+  }
+
+  .mobile-container {
+    position: relative;
+    padding: 72px 24px 40px 16px;
+  }
+
+  .mobile-menu-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 0;
+    line-height: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-menu-close-btn-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .mobile-menu-close-btn:hover,
+  .mobile-menu-close-btn:focus {
+    background-color: #404bbf;
+    border: none;
+    fill: #ffffff;
+  }
+
+  .mobile-nav-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 168px;
+  }
+
+  .mobile-nav-menu-link {
+    color: #2e2f42;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-nav-menu-link:hover,
+  .mobile-nav-menu-link:focus {
+    color: #404bbf;
+  }
+
+  .mobile-main-link {
+    color: #404bbf;
+  }
+
+  .container-adress-social {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .mobile-menu-contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .mobile-menu-contacts-link {
+    color: #434455;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-menu-contacts-link:hover,
+  .mobile-menu-contacts-link:focus {
+    color: #404bbf;
+  }
+
+  .mobile-menu-social-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .mobile-menu-social-list-items {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mobile-menu-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    width: 100%;
+    height: 100%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-menu-social-link:hover,
+  .mobile-menu-social-link:focus {
+    background-color: #404bbf;
+  }
+
+  .mobile-menu-social-icon {
+    fill: #f4f4fd;
+  }
 }
-.benefits-items-list {
-  width: calc((100% - 72px) / 4);
+/* ============== /MOBILE HEADER STYLES ===================== */
+/* ============== TABLET HEADER STYLES ====================== */
+@media screen and (min-width: 768px) {
+  .mobile-menu-burger {
+    display: none;
+  }
+
+  .mobile-menu-wrapper {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .logo {
+    margin-right: 120px;
+    padding-top: 25.5px;
+    padding-bottom: 25.5px;
+  }
+
+  .menu-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .menu-link {
+    color: #2e2f42;
+    font-size: 16px;
+    font-weight: 500;
+    font-weight: 500;
+    font-size: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu-link:hover,
+  .menu-link:focus {
+    color: #404bbf;
+  }
+
+  .current {
+    position: relative;
+    color: #404bbf;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .menu-link.current::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404bbf;
+    bottom: -1px;
+    left: 0;
+  }
+
+  .contacts {
+    display: flex;
+  }
+
+  .contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contacts-items {
+    color: #434455;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .contacts-items:hover,
+  .contacts-items:focus {
+    color: #404bbf;
+  }
 }
-/*================================Section 3===================================*/
-.team {
-  background-color: #f4f4fd;
+/* ============== /TABLET HEADER STYLES ===================== */
+/* =============== DESKTOP HEADER STYLES ==================== */
+@media screen and (min-width: 1158px) {
+  .logo {
+    margin-right: 76px;
+  }
+
+  .contacts-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .contacts-items {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  .contacts-mail {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
-.team-main-title {
-  font-size: 36px;
-  line-height: 1.11;
+/* =============== /DESKTOP HEADER STYLES =================== */
+/* ============== MOBILE SOLUTIONS STYLES =================== */
+.main-solutions {
+  padding: 72px 0px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: #2e2f42;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/solution/mobile-people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-resolution: 192dpi) {
+  .main-solutions {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/solution/mobile-people-office@2x.jpg);
+  }
+}
+
+.main-title {
+  color: #fff;
   text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: #2e2f42;
+  max-width: 288px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 72px;
 }
+
+.order-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px 32px;
+  border-radius: 4px;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  background-color: #4d5ae5;
+  color: #fff;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.order-btn:hover,
+.order-btn:focus {
+  background-color: #404bbf;
+}
+/* ============== /MOBILE SOLUTIONS STYLES ================== */
+/* ============== TABLET SOLUTIONS STYLES =================== */
+@media screen and (min-width: 768px) {
+  .main-solutions {
+    padding: 112px 0px;
+    min-width: 768px;
+    margin: 0 auto;
+    background-color: #2e2f42;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/solution/tablet-people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .main-solutions {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/solution/tablet-people-office@2x.jpg);
+    }
+  }
+
+  .main-title {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+    margin-bottom: 36px;
+  }
+}
+/* ============== /TABLET SOLUTIONS STYLES ================== */
+/* ============== DESKTOP SOLUTIONS STYLES ================== */
+@media screen and (min-width: 1158px) {
+  .main-solutions {
+    max-width: 1440px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/solution/desktop-people-office.jpg);
+  }
+  @media screen and (min-resolution: 192dpi) {
+    .main-solutions {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/solution/desktop-people-office@2x.jpg);
+    }
+  }
+
+  .main-title {
+    margin-bottom: 48px;
+  }
+}
+/* ============== /DESKTOP SOLUTIONS STYLES ================ */
+/* ============== MOBILE BENEFITS STYLES =================== */
+.benefits-container-icon-items {
+  display: none;
+}
+
+.benefits {
+  background-color: #fff;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  margin: 0 auto;
+  padding: 96px 0px;
+}
+
+.benefits-title {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.benefits-description {
+  color: #434455;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+/* ============== /MOBILE BENEFITS STYLES =================== */
+/* ============== TABLET BENEFITS STYLES ==================== */
+@media screen and (min-width: 768px) {
+  .benefits-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 72px;
+  }
+
+  .benefits-items-list {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
+  .benefits-title {
+    text-align: start;
+  }
+}
+/* ============== /TABLET BENEFITS STYLES ================== */
+/* ============== DESKTOP BENEFITS STYLES ================== */
+@media screen and (min-width: 1158px) {
+  .benefits-list {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+  .benefits-items-list {
+    width: calc((100% - 72px) / 4);
+  }
+
+  .benefits-container-icon-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    border: 1px solid #8e8f99;
+  }
+
+  .benefits-title {
+    color: #2e2f42;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+  }
+
+  .benefits-description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  .benefits-list {
+    display: flex;
+    gap: 24px;
+  }
+  .benefits-list {
+    display: flex;
+    gap: 24px;
+  }
+}
+/* ============== /DESKTOP BENEFITS STYLES ================= */
+/* ============== MOBILE OUR TEAM STYLES =================== */
+.team-container {
+  max-width: 296px;
+}
+.team {
+  background-color: #f4f4fd;
+  padding: 96px 0px;
+}
+
+.team-main-title {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
 .team-items-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
 }
+
 .team-list {
   background-color: #ffffff;
-  width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .team-company {
   padding: 32px 0;
 }
+
 .team-list-title {
-  font-weight: 500;
+  color: #2e2f42;
+  text-align: center;
   font-size: 20px;
+  font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #2e2f42;
   margin-bottom: 8px;
-  text-align: center;
 }
+
 .team-list-description {
-  font-size: 16;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   color: #434455;
   text-align: center;
+  font-size: 16;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   margin-bottom: 8px;
 }
+
 .social-list {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 24px;
 }
+
 .social-list-items {
   width: 40px;
   height: 40px;
@@ -291,106 +675,193 @@ img {
   height: 100%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .social-link:hover,
 .social-link:focus {
   background-color: #404bbf;
 }
+
 .social-icon {
   fill: #f4f4fd;
 }
-/*==============================Section 4=====================================*/
+/* ============== /MOBILE OUR TEAM STYLES =================== */
+/* ============== TABLET OUR TEAM STYLES ==================== */
+@media screen and (min-width: 768px) {
+  .team-container {
+    max-width: 584px;
+  }
+  .team-items-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 64px;
+  }
+
+  .team-list {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+/* ============== /TABLET OUR TEAM STYLES ================== */
+/* ============== DESKTOP OUR TEAM STYLES ================== */
+@media screen and (min-width: 1158px) {
+  .team-container {
+    min-width: 1158px;
+  }
+
+  .team-items-list {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+  .team-list {
+    width: calc((100% - 72px) / 4);
+  }
+}
+/* ============== /DESKTOP OUR TEAM STYLES ================= */
+/* ============== MOBILE PORTFOLIO STYLES =================== */
+.portfolio {
+  padding: 96px 0px;
+  background-color: #fff;
+}
+
 .portfolio-items {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  row-gap: 48px;
+  flex-direction: column;
+  gap: 48px;
 }
-.portfolio-items-list {
-  width: calc((100% - 48px) / 3);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+@media screen and (max-width: 767px) {
+  .overlay {
+    display: none;
+  }
 }
-.portfolio-items-list:hover {
-  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+
+.portfolio-main-title {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 72px;
 }
-.portfolio-box {
-  position: relative;
-  overflow: hidden;
+
+.portfolio-title {
+  color: #2e2f42;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
-.overlay {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #4d5ae5;
-  transform: translate(100%);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+.portfolio-description {
+  color: #434455;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.description-items {
+  border: 1px solid #f4f4fd;
+  border-top: none;
+  background: #fff;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  padding: 32px 16px;
+}
+/* ============== /MOBILE PORTFOLIO STYLES ===================== */
+/* ============== TABLET PORTFOLIO STYLES ================== */
+@media screen and (min-width: 768px) {
+  .portfolio-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 72px;
+  }
+
+  .portfolio-items-list {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
+  .portfolio-box {
+    position: relative;
+    overflow: hidden;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    color: #f4f4fd;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding: 40px 32px;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .portfolio-items-list:hover .overlay {
+    transform: translate(0);
+  }
+
+  .portfolio-items-list:hover {
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+      0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+      0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  }
+}
+/* ============== /TABLET PORTFOLIO STYLES ================== */
+/* ============== DESKTOP PORTFOLIO STYLES ================== */
+@media screen and (min-width: 1158px) {
+  .portfolio-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 48px;
+  }
+
+  .portfolio-items-list {
+    flex-basis: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .description-items {
+    border: 1px solid #e7e9fc;
+  }
+}
+/* ============== /DESKTOP PORTFOLIO STYLES ==================== */
+/* ============== MOBILE FOOTER STYLES ========================= */
+.end {
+  background: #2e2f42;
+  padding: 97.5px 16px 96px 16px;
+}
+
+.container-with-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 17.5px;
+  margin-bottom: 72px;
+}
+
+.footer-logo {
+  text-align: center;
+}
+.footer-end-accent {
+  color: #f4f4fd;
+}
+
+.end-description {
   color: #f4f4fd;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  padding: 40px 32px;
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: 288px;
 }
-.portfolio-items-list:hover .overlay {
-  transform: translate(0);
-}
-.portfolio-main-title {
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: #2e2f42;
-  margin-bottom: 72px;
-}
-.portfolio-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  margin-bottom: 8px;
-}
-.portfolio-description {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-}
-.description-items {
-  border: 1px solid #e7e9fc;
-  border-top: none;
-  background: #fff;
-  padding: 32px 16px;
-}
-/*================================Footer===========================*/
-.end {
-  background-color: #2e2f42;
-  padding: 100px 0;
-}
-.end-accent {
-  color: #f4f4fd;
-}
-.end-description {
-  line-height: 1.5;
-  color: #f4f4fd;
-  letter-spacing: 0.02em;
-  max-width: 264px;
-}
-.footer-link {
-  margin-bottom: 16px;
-}
-.footer-container {
-  display: flex;
-  align-items: baseline;
-}
-.container-with-logo {
-  margin-right: 120px;
-}
+
 .footer-title {
   color: #fff;
   font-size: 16px;
@@ -398,20 +869,17 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  text-align: center;
 }
+
 .footer-social-list {
   gap: 16px;
 }
-.footer-social-link {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer-social-link:hover,
-.footer-social-link:focus {
-  background-color: #31d0aa;
-}
+
 .footer-social-icons {
-  margin-right: 80px;
+  margin-bottom: 72px;
 }
+
 .subscribe-description {
   color: #fff;
   font-size: 16px;
@@ -419,33 +887,40 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  text-align: center;
 }
-.subscribe-form {
-  display: flex;
-  gap: 24px;
-}
+
 .subscribe-form-input {
-  width: 264px;
+  width: 288px;
   height: 40px;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  border-radius: 4px;
   background-color: transparent;
-  color: #fff;
+  border-radius: 4px;
   border: 1px solid #fff;
+  opacity: 0.3;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   padding-top: 8px;
   padding-left: 16px;
   padding-bottom: 8px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  margin-bottom: 16px;
 }
+
+.subscribe-form-label {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+
 .subscribe-form-input::placeholder {
   color: #fff;
 }
+
 .subscribe-btn {
   display: flex;
   justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
   align-items: center;
   cursor: pointer;
   min-width: 165px;
@@ -453,7 +928,6 @@ img {
   border-radius: 4px;
   background-color: #4d5ae5;
   color: #fff;
-  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -461,15 +935,115 @@ img {
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .subscribe-btn:hover,
 .subscribe-btn:focus {
   background-color: #404bbf;
 }
+
 .subscribe-btn-icon {
   fill: #ffffff;
   margin-left: 16px;
 }
-/*=========================Backdrop==========================*/
+/* ============== /MOBILE FOOTER STYLES ======================= */
+/* ============== TABLET FOOTER STYLES ======================== */
+@media screen and (min-width: 768px) {
+  .end {
+    padding: 97.5px 164px 96px 108px;
+  }
+
+  .container-with-logo {
+    margin-bottom: 0px;
+  }
+
+  .end-description {
+    width: 264px;
+  }
+
+  .footer-logo {
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .footer-title {
+    text-align: left;
+  }
+
+  .footer-social-link {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .footer-social-link:hover,
+  .footer-social-link:focus {
+    background-color: #31d0aa;
+  }
+
+  .footer-social-icons {
+    margin-bottom: 0px;
+  }
+
+  .container-with-social-icons {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 72px;
+  }
+
+  .subscribe-description {
+    text-align: left;
+  }
+
+  .subscribe-form {
+    display: flex;
+    gap: 24px;
+    margin: 0px;
+  }
+
+  .subscribe-form-input {
+    width: 264px;
+    height: 40px;
+  }
+
+  .subscribe-btn {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+/* ============== /TABLET FOOTER STYLES ====================== */
+/* ============== DESKTOP FOOTER STYLES ====================== */
+@media screen and (min-width: 1158px) {
+  .end {
+    padding: 101.5px 0px 100px 0px;
+  }
+
+  .footer-container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .container-with-social-icons {
+    gap: 0px;
+    margin-bottom: 0px;
+  }
+
+  .container-with-logo {
+    margin-right: 120px;
+  }
+
+  .footer-logo {
+    margin-right: 0px;
+  }
+
+  .footer-social-icons {
+    margin-right: 80px;
+  }
+
+  .end-description {
+    max-width: 264px;
+  }
+}
+/* ============== /DESKTOP FOOTER STYLES ==================== */
+/* =================== MOBILE BACKDROP ====================== */
 .backdrop {
   position: fixed;
   top: 0;
@@ -484,26 +1058,29 @@ img {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .backdrop.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
-/*==================Modal-window============================*/
+/* =================== /MOBILE BACKDROP ====================== */
+/* ================= MOBILE MODAL WINDOW ===================== */
 .modal-window {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
-  min-height: 584px;
-  padding: 72px 24px 24px 24px;
+  width: 288px;
+  min-height: 623px;
+  padding: 72px 16px 24px 16px;
   border-radius: 4px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-close-btn {
   position: absolute;
   top: 24px;
@@ -515,7 +1092,6 @@ img {
   height: 24px;
   padding: 0px;
   border-radius: 50%;
-  cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.1);
   line-height: 0;
   background-color: #e7e9fc;
@@ -523,15 +1099,18 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-close-btn-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: #404bbf;
   border: none;
   fill: #ffffff;
 }
+
 .modal-window-desc {
   text-align: center;
   color: #2e2f42;
@@ -540,10 +1119,13 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  max-width: 256px;
 }
+
 .review-form-field-wrapper {
   margin-bottom: 8px;
 }
+
 .review-form-field-label {
   display: block;
   color: #8e8f99;
@@ -553,13 +1135,14 @@ img {
   letter-spacing: 0.04em;
   margin-bottom: 4px;
 }
+
 .review-form-input-wrapper {
   position: relative;
 }
 .review-form-input {
   width: 100%;
   height: 40px;
-  padding-left: 38px;
+  padding-left: 34px;
   border-radius: 4px;
   background-color: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -580,7 +1163,7 @@ img {
 .review-form-input:focus + .review-form-input-icon {
   fill: #4d5ae5;
 }
-.contaiber-textarea {
+.container-textarea {
   margin-bottom: 16px;
 }
 .review-form-comment {
@@ -603,10 +1186,10 @@ img {
   border-color: #4d5ae5;
 }
 .review-form-comment::placeholder {
-  color: rgba(46, 47, 66, 0.4);
+  color: #8e8f99;
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
 }
 .review-form-checkbox-wrapper {
@@ -619,6 +1202,7 @@ img {
   line-height: 1.17;
   letter-spacing: 0.04em;
 }
+
 .review-form-own-checkbox {
   display: inline-flex;
   align-items: center;
@@ -682,3 +1266,24 @@ img {
 .review-submit-btn:focus {
   background-color: #404bbf;
 }
+/* ================= /MOBILE MODAL WINDOW ===================== */
+/* ================= TABLET MODAL WINDOW ===================== */
+@media screen and (min-width: 768px) {
+  .modal-window {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
+
+  .modal-window-desc {
+    max-width: 360px;
+  }
+}
+/* ================= /TABLET MODAL WINDOW ===================== */
+/* ================= DESKTOP MODAL WINDOW ===================== */
+@media screen and (min-width: 1158px) {
+  .review-form-input {
+    padding-left: 38px;
+  }
+}
+/* ================= /DESKTOP MODAL WINDOW ===================== */
