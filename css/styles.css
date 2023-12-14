@@ -60,6 +60,11 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (max-width: 1157px) {
+  .section {
+    padding: 96px 0;
+  }
+}
 /* ============== TABLET GENERAL STYLES ==================== */
 @media screen and (min-width: 768px) {
   .container {
@@ -73,6 +78,9 @@ button {
     max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .section {
+    padding: 120px 0;
   }
 }
 /* ============== /DESKTOP GENERAL STYLES ==================== */
@@ -128,6 +136,7 @@ button {
   }
 
   .mobile-menu-wrapper {
+    display: flex;
     position: fixed;
     top: 0;
     right: 0;
@@ -145,8 +154,12 @@ button {
   }
 
   .mobile-container {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    padding: 72px 24px 40px 16px;
+    padding-top: 72px;
+    padding-right: 24px;
+    padding-bottom: 40px;
   }
 
   .mobile-menu-close-btn {
@@ -174,11 +187,16 @@ button {
     fill: #ffffff;
   }
 
+  .mobile-nav-menu {
+    display: flex;
+    margin-bottom: auto;
+  }
+
   .mobile-nav-menu-list {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-bottom: 168px;
+    margin-bottom: auto;
   }
 
   .mobile-nav-menu-link {
@@ -471,6 +489,7 @@ button {
 /* ============== DESKTOP SOLUTIONS STYLES ================== */
 @media screen and (min-width: 1158px) {
   .main-solutions {
+    padding: 188px 0px;
     max-width: 1440px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -506,8 +525,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 72px;
-  margin: 0 auto;
-  padding: 96px 0px;
 }
 
 .benefits-title {
@@ -569,25 +586,16 @@ button {
   }
 
   .benefits-title {
-    color: #2e2f42;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    letter-spacing: 0.02em;
-    margin-bottom: 8px;
   }
 
   .benefits-description {
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
   }
 
-  .benefits-list {
-    display: flex;
-    gap: 24px;
-  }
   .benefits-list {
     display: flex;
     gap: 24px;
@@ -598,9 +606,9 @@ button {
 .team-container {
   max-width: 296px;
 }
+
 .team {
   background-color: #f4f4fd;
-  padding: 96px 0px;
 }
 
 .team-main-title {
@@ -688,8 +696,9 @@ button {
 /* ============== TABLET OUR TEAM STYLES ==================== */
 @media screen and (min-width: 768px) {
   .team-container {
-    max-width: 584px;
+    min-width: 584px;
   }
+
   .team-items-list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -719,7 +728,6 @@ button {
 /* ============== /DESKTOP OUR TEAM STYLES ================= */
 /* ============== MOBILE PORTFOLIO STYLES =================== */
 .portfolio {
-  padding: 96px 0px;
   background-color: #fff;
 }
 
@@ -827,28 +835,24 @@ button {
     flex-basis: calc((100% - 48px) / 3);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-
-  .description-items {
-    border: 1px solid #e7e9fc;
-  }
 }
 /* ============== /DESKTOP PORTFOLIO STYLES ==================== */
 /* ============== MOBILE FOOTER STYLES ========================= */
 .end {
   background: #2e2f42;
-  padding: 97.5px 16px 96px 16px;
 }
 
 .container-with-logo {
   display: flex;
   flex-direction: column;
-  gap: 17.5px;
+  gap: 16px;
   margin-bottom: 72px;
 }
 
 .footer-logo {
   text-align: center;
 }
+
 .footer-end-accent {
   color: #f4f4fd;
 }
@@ -862,22 +866,24 @@ button {
   max-width: 288px;
 }
 
+.footer-social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 72px;
+}
+
 .footer-title {
   color: #fff;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 16px;
   text-align: center;
 }
 
 .footer-social-list {
   gap: 16px;
-}
-
-.footer-social-icons {
-  margin-bottom: 72px;
 }
 
 .subscribe-description {
@@ -893,15 +899,23 @@ button {
 .subscribe-form-input {
   width: 288px;
   height: 40px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.04em;
   background-color: transparent;
   border-radius: 4px;
   border: 1px solid #fff;
   opacity: 0.3;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  padding-top: 8px;
-  padding-left: 16px;
-  padding-bottom: 8px;
+  padding: 8px 16px;
   margin-bottom: 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: 0px solid transparent;
+}
+.subscribe-form-input:focus {
+  border-color: #4d5ae5;
 }
 
 .subscribe-form-label {
@@ -948,26 +962,40 @@ button {
 /* ============== /MOBILE FOOTER STYLES ======================= */
 /* ============== TABLET FOOTER STYLES ======================== */
 @media screen and (min-width: 768px) {
-  .end {
-    padding: 97.5px 164px 96px 108px;
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 72px;
+    max-width: 584px;
+  }
+
+  .subscribe-form {
+    display: flex;
+    gap: 24px;
+    margin: 0px;
   }
 
   .container-with-logo {
     margin-bottom: 0px;
   }
 
-  .end-description {
-    width: 264px;
-  }
-
   .footer-logo {
-    text-align: left;
+    text-align: start;
     padding: 0px;
     margin: 0px;
   }
 
+  .end-description {
+    width: 264px;
+  }
+
+  .footer-social-icons {
+    margin-bottom: 0px;
+  }
+
   .footer-title {
-    text-align: left;
+    text-align: start;
   }
 
   .footer-social-link {
@@ -979,59 +1007,31 @@ button {
     background-color: #31d0aa;
   }
 
-  .footer-social-icons {
-    margin-bottom: 0px;
-  }
-
-  .container-with-social-icons {
-    display: flex;
-    gap: 24px;
-    margin-bottom: 72px;
-  }
-
   .subscribe-description {
     text-align: left;
   }
 
-  .subscribe-form {
-    display: flex;
-    gap: 24px;
-    margin: 0px;
-  }
-
   .subscribe-form-input {
     width: 264px;
-    height: 40px;
-  }
-
-  .subscribe-btn {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-bottom: 0px;
   }
 }
 /* ============== /TABLET FOOTER STYLES ====================== */
 /* ============== DESKTOP FOOTER STYLES ====================== */
 @media screen and (min-width: 1158px) {
   .end {
-    padding: 101.5px 0px 100px 0px;
+    padding: 100px 0px;
   }
 
   .footer-container {
-    display: flex;
+    flex-wrap: nowrap;
     align-items: baseline;
-  }
-
-  .container-with-social-icons {
     gap: 0px;
-    margin-bottom: 0px;
+    min-width: 1158px;
   }
 
   .container-with-logo {
     margin-right: 120px;
-  }
-
-  .footer-logo {
-    margin-right: 0px;
   }
 
   .footer-social-icons {
